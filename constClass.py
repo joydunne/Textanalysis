@@ -23,5 +23,19 @@ class constText:
             c = n + 1 
         return c 
     
+    def religiousWords (self, word):
+        n = 0 #counter
+        self.getSentences()
+        for s in self.sentences:
+            if word  in s:
+                n += 1 #saying: n is equal to n + 1 
+        return n 
 
-        
+    def getSentences (self): #read through the entire text and seperates the sentences
+        with open (self.filename) as f:
+            fullText = f.read()
+        fullText = fullText.replace ('/n', ' ')
+        self.sentences = fullText.split(".")     
+
+
+            

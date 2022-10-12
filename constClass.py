@@ -28,7 +28,7 @@ class constText:
         r = []
         self.getSentences()
         for s in self.sentences:
-            if word  in s:
+            if word.lower() in s.lower():
                 n += 1 #saying: n is equal to n + 1 
                 #s = s.replace(". ")
                 r.append(s)

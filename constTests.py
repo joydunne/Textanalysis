@@ -4,19 +4,20 @@ USFile = constText ("USconst.txt")
 CanadaFile = constText ("canadaConst.txt")
 NetherlandFile = constText ("netherlandConst.txt")
 
-print ("Number of Lines:", USFile.fileLength()) #() calls the function 
-#print ("Number of Lines:", CanadaFile.fileLength()) #() calls the function 
-#print ("Number of Lines:", NetherlandFile.fileLength()) #() calls the function 
+#print ("Number of Lines in US:", USFile.fileLength()) #() calls the function 
+#print ("Number of Lines in Canada:", CanadaFile.fileLength()) #() calls the function 
+print ("Number of Lines in Netherlands:", NetherlandFile.fileLength()) #() calls the function 
 
-print ("Number of Stanzas:", USFile.stanzaCount()) #() calls the function 
-#print ("Number of Stanzas:", CanadaFile.stanzaCount()) #() calls the function 
-#print ("Number of Stanzas:", NetherlandFile.stanzaCount()) #() calls the function 
+#print ("Number of Stanzas in US:", USFile.stanzaCount()) #() calls the function 
+#print ("Number of Stanzas in Canada:", CanadaFile.stanzaCount()) #() calls the function 
+print ("Number of Stanzas in Netherlands:", NetherlandFile.stanzaCount()) #() calls the function 
 
-w = "religion"
-print (f"Number of {w}:", USFile.religiousWords(w))
-#print (f"Number of {w}:", {CanadaFile.religiousWords(w)})
-#print (f"Number of {w}:", {NetherlandFile.religiousWords(w)})
+importantWords  = ["religion", "God", "faith", "church", "secular"]
+for w in importantWords:
+    #print (f"Number of {w} in US:", USFile.religiousWords(w))
+    #print (f"Number of {w} in Canada:", CanadaFile.religiousWords(w))
+    print (f"Number of {w} in Netherlands:", NetherlandFile.religiousWords(w))
 
-print ("Number of Sentences:", len(USFile.sentences))
-#print ("Number of Sentences:", len(CanadaFile.sentences))
-#print ("Number of Sentences:", len(NetherlandFile.sentences))
+#print ("Number of Sentences in US:", len(USFile.sentences))
+#print ("Number of Sentences in Canada:", len(CanadaFile.sentences))
+print ("Number of Sentences in Netherlands:", len(NetherlandFile.sentences))

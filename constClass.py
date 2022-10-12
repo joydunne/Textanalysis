@@ -1,6 +1,6 @@
 class constText:
     '''Analyze texts using stats and such.'''
-    def __init__ (self, filename):
+    def __init__ (self, filename): #initializing my class 
         self.filename = filename 
         with open(self.filename) as f:
             self.lines = f.readlines()
@@ -25,11 +25,14 @@ class constText:
     
     def religiousWords (self, word):
         n = 0 #counter
+        r = []
         self.getSentences()
         for s in self.sentences:
             if word  in s:
                 n += 1 #saying: n is equal to n + 1 
-        return n 
+                #s = s.replace(". ")
+                r.append(s)
+        return n, r  
 
     def getSentences (self): #read through the entire text and seperates the sentences
         with open (self.filename) as f:

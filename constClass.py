@@ -9,7 +9,7 @@ class constText:
         n = 0 
         for line in self.lines:
             line = line.strip()
-            print (line, len(line))
+            #print (line, len(line))
             if line != '':   #'' means an empty string 
                 n = n + 1 # n is called a counter 
         return (n) 
@@ -25,10 +25,10 @@ class constText:
     
     def religiousWords (self, word):
         n = 0 #counter
-        r = []
+        r = [] #creates list 
         self.getSentences()
         for s in self.sentences:
-            if word.lower() in s.lower():
+            if word.lower() in s.lower(): # .lower makes all the text lowercase 
                 n += 1 #saying: n is equal to n + 1 
                 #s = s.replace(". ")
                 r.append(s)
@@ -39,6 +39,3 @@ class constText:
             fullText = f.read()
         fullText = fullText.replace ('/n', ' ')
         self.sentences = fullText.split(".")     
-
-
-            
